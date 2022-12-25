@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import Axios from 'axios'
+import Axios from 'axios';
 
 
 export default function App() {
@@ -9,13 +9,15 @@ export default function App() {
 
         Axios.get('http://jsonplaceholder.typicode.com/todos')
         .then((result)=>{
-            // console.log(result)
             setTodos(result.data)
         })
         .catch((error)=>{
             console.error(error)
         })
-    })
+    },[]);
+    
+
+
 
   return (
     <div>

@@ -1,21 +1,23 @@
-import './App.css';
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import Navbar from './components/navbar/Navbar';
+import Leftbar from './components/left bar/Leftbar';
+import Update from './components/update/Update';
+import Rightbar from './components/right bar/RightBar';
+import "./App.css";
 
-function App() {
+
+
+const App = () => {
+ 
   return (
-    <div className="App">
-      <Navbar bg="primary" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </div>
+    <>
+      <Navbar />
+      <div className="container">
+        <Leftbar />
+        <Update />
+        <Rightbar />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
